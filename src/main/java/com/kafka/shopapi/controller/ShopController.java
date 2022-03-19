@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kafka.shopapi.kafka.KafkaClient;
 import com.kafka.shopapi.model.Shop;
 import com.kafka.shopapi.model.ShopItem;
 import com.kafka.shopapi.model.dto.ShopDTO;
@@ -24,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 public class ShopController {
 
 	private final ShopRepository shopRepository;
+	private final KafkaClient kafkaClient;
 	
 	@GetMapping
 	public List<ShopDTO> getShop() {
@@ -35,15 +37,18 @@ public class ShopController {
 	}
 	@PostMapping
 	public ShopDTO saveShop(@RequestBody ShopDTO shopDTO) {
-		shopDTO.setIdentifier(
-				UUID.randomUUID().toString());
+		shopDTO.setIdentifier(UUID.randomUUID().toString());
 		shopDTO.setDateShop(LocalDate.now());
 		shopDTO.setStatus("PENDING");
+		
 		Shop shop = Shop.convert(shopDTO);
 		for (ShopItem shopItem : shop.getItems()) {
 			shopItem.setShop(shop);
 		}
-		return ShopDTO.convert(shopRepository.save(shop));
+		
+		shopDTO = ShopDTO.convert(shopRepository.save(shop));
+		kafkaClient.sendMessage(shopDTO);
+		return shopDTO;
 	}
 
 
