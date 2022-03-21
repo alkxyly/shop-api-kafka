@@ -1,4 +1,4 @@
-package com.kafka.shopapi.model;
+package com.kafka.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -14,7 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.kafka.shopapi.model.dto.ShopDTO;
+import com.kafka.model.dto.ShopDTO;
 
 import lombok.Getter;
 import lombok.Setter;

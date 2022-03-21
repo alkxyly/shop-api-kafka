@@ -1,4 +1,4 @@
-package com.kafka.shopapi.model;
+package com.kafka.model;
 
 import java.io.Serializable;
 
@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.kafka.model.dto.ShopItemDTO;
 
 import lombok.Getter;
 import lombok.Setter;

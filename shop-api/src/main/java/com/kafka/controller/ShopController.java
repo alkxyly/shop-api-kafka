@@ -1,4 +1,4 @@
-package com.kafka.shopapi.controller;
+package com.kafka.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kafka.shopapi.kafka.KafkaClient;
-import com.kafka.shopapi.model.Shop;
-import com.kafka.shopapi.model.ShopItem;
-import com.kafka.shopapi.model.dto.ShopDTO;
-import com.kafka.shopapi.repository.ShopRepository;
+import com.kafka.kafka.KafkaClient;
+import com.kafka.model.Shop;
+import com.kafka.model.ShopItem;
+import com.kafka.model.dto.ShopDTO;
+import com.kafka.repository.ShopRepository;
 
 import lombok.RequiredArgsConstructor;
 

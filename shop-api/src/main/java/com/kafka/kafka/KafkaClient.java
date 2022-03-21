@@ -1,9 +1,9 @@
-package com.kafka.shopapi.kafka;
+package com.kafka.kafka;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.kafka.shopapi.model.dto.ShopDTO;
+import com.kafka.model.dto.ShopDTO;
 
 import lombok.RequiredArgsConstructor;
 

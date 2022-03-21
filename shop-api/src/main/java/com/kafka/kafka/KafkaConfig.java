@@ -1,4 +1,4 @@
-package com.kafka.shopapi.kafka;
+package com.kafka.kafka;
 
 import java.util.HashMap;
 
@@ -18,7 +18,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import com.kafka.shopapi.model.dto.ShopDTO;
+import com.kafka.model.dto.ShopDTO;
 
 @Configuration
 public class KafkaConfig {

@@ -1,19 +1,20 @@
-package com.kafka.shopapi.model.dto;
+package com.kafka.model.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.kafka.shopapi.model.Shop;
-import com.kafka.shopapi.model.ShopItemDTO;
+import com.kafka.model.Shop;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ShopDTO {
+public class ShopDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String identifier;
 	private LocalDate dateShop;
 	private String status;
