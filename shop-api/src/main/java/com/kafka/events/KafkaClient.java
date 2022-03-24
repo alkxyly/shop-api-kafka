@@ -1,4 +1,4 @@
-package com.kafka.kafka;
+package com.kafka.events;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

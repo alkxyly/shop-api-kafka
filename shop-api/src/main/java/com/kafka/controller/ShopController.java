@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kafka.kafka.KafkaClient;
+import com.kafka.events.KafkaClient;
 import com.kafka.model.Shop;
 import com.kafka.model.ShopItem;
 import com.kafka.model.dto.ShopDTO;

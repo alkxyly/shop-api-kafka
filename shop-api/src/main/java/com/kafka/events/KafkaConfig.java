@@ -1,4 +1,4 @@
-package com.kafka.kafka;
+package com.kafka.events;
 
 import java.util.HashMap;
 

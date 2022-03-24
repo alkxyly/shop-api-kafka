@@ -7,5 +7,6 @@ import com.kafka.model.Shop;
 
 @Repository
 public interface ShopRepository extends JpaRepository<Shop, Long> {
-
+	
+	Shop findByIdentifier(String identifier);
 }
